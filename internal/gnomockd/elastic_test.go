@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	"github.com/elastic/go-elasticsearch/v7"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/gnomockd"
-	"github.com/orlangure/gnomock/internal/israce"
-	_ "github.com/orlangure/gnomock/preset/elastic"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/gnomockd"
+	"github.com/sandwich-go/gnomock/internal/israce"
+	_ "github.com/sandwich-go/gnomock/preset/elastic"
 	"github.com/stretchr/testify/require"
 )
 

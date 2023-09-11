@@ -1,6 +1,6 @@
 # Gnomock Splunk
 
-Gnomock Splunk is a [Gnomock](https://github.com/orlangure/gnomock) preset for
+Gnomock Splunk is a [Gnomock](https://github.com/sandwich-go/gnomock) preset for
 running tests against a real Splunk container, without mocks.
 
 ```go
@@ -11,8 +11,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/splunk"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/splunk"
 )
 
 func ExamplePreset() {

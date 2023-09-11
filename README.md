@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://github.com/orlangure/gnomock/raw/master/gnomock.png">
+    <img src="https://github.com/sandwich-go/gnomock/raw/master/gnomock.png">
 </div>
 
 # <div align="center">Gnomock – tests without mocks</div>
@@ -14,7 +14,7 @@
 
 🕹️ Test actual program behavior and side effects
 
-## <div align="center">[![PkgGoDev](https://pkg.go.dev/badge/github.com/orlangure/gnomock)](https://pkg.go.dev/github.com/orlangure/gnomock) ![Test](https://github.com/orlangure/gnomock/workflows/Test/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/orlangure/gnomock)](https://goreportcard.com/report/github.com/orlangure/gnomock) [![codecov](https://codecov.io/gh/orlangure/gnomock/branch/master/graph/badge.svg?token=F0XYPSEIMK)](https://codecov.io/gh/orlangure/gnomock)</div>
+## <div align="center">[![PkgGoDev](https://pkg.go.dev/badge/github.com/sandwich-go/gnomock)](https://pkg.go.dev/github.com/sandwich-go/gnomock) ![Test](https://github.com/sandwich-go/gnomock/workflows/Test/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/sandwich-go/gnomock)](https://goreportcard.com/report/github.com/sandwich-go/gnomock) [![codecov](https://codecov.io/gh/orlangure/gnomock/branch/master/graph/badge.svg?token=F0XYPSEIMK)](https://codecov.io/gh/orlangure/gnomock)</div>
 
 Gnomock is an integration and end-to-end testing toolkit. It uses Docker to
 create **temporary containers** for application dependencies, **setup** their
@@ -64,7 +64,7 @@ this moment, but it might work.
 See the following example to get started:
 
 ```
-go get github.com/orlangure/gnomock
+go get github.com/sandwich-go/gnomock
 ```
 
 Setting up a **Postgres** container with schema setup example:
@@ -74,8 +74,8 @@ import (
 	"database/sql"
 
 	_ "github.com/lib/pq" // postgres driver
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/postgres"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/postgres"
 )
 
 p := postgres.Preset(
@@ -96,7 +96,7 @@ db, _ := sql.Open("postgres", connStr)
 ```
 
 See package
-[reference](https://pkg.go.dev/github.com/orlangure/gnomock?tab=doc). For
+[reference](https://pkg.go.dev/github.com/sandwich-go/gnomock?tab=doc). For
 Preset documentation, refer to [Presets](#official-presets) section.
 
 ### Using Gnomock in other languages
@@ -116,25 +116,25 @@ versions might work as well.*</small>
 
 | Preset | Go package | HTTP API | Go API | Supported versions |
 |--------|------------|----------|--------|---------------------|
-Localstack (AWS) | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/localstack) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startLocalstack) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/localstack?tab=doc) | `0.12.2`
-Splunk | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/splunk) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startSplunk) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/splunk?tab=doc) | `8.0.2`
-Redis | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/redis) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startRedis) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/redis?tab=doc) | `5.0.10`, `6.0.9`
-Memcached | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/memcached) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMemcached) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/memcached?tab=doc) | `1.6.9`
-MySQL | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/mysql) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMysql) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/mysql?tab=doc) | `5.7.32`, `8.0.22`
-MariaDB | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/mariadb) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMariadb) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/mariadb?tab=doc) | `10.5.8`
-PostgreSQL | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/postgres) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startPostgres) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/postgres?tab=doc) |  `10.15`, `11.10`, `12.5`, `13.1`
-Microsoft SQL Server | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/mssql) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMssql) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/mssql?tab=doc) | `2017-latest`, `2019-latest`
-MongoDB | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/mongo) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMongo) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/mongo?tab=doc) | `3.6.21`, `4.4`
-RabbitMQ | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/rabbitmq) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startRabbitMq) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/rabbitmq?tab=doc) | `3.8.9-alpine`, `3.8.9-management-alpine`
-Kafka | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/kafka) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startKafka) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/kafka?tab=doc) | `2.5.1-L0`
-Elasticsearch | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/elastic) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startElastic) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/elastic?tab=doc) | `5.6`, `6.8.13`, `7.9.3`
-Kubernetes | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/k3s) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startKubernetes) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/k3s?tab=doc) | `v1.19.12`
-CockroachDB | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/cockroachdb) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startCockroachDB) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/cockroachdb?tab=doc) | `v19.2.11`, `v20.1.10`
-InfluxDB | [Go package](https://github.com/orlangure/gnomock/tree/master/preset/influxdb) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startInfluxDB) | [Reference](https://pkg.go.dev/github.com/orlangure/gnomock/preset/influxdb?tab=doc) | `2.0.4-alpine`
+Localstack (AWS) | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/localstack) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startLocalstack) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/localstack?tab=doc) | `0.12.2`
+Splunk | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/splunk) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startSplunk) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/splunk?tab=doc) | `8.0.2`
+Redis | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/redis) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startRedis) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/redis?tab=doc) | `5.0.10`, `6.0.9`
+Memcached | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/memcached) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMemcached) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/memcached?tab=doc) | `1.6.9`
+MySQL | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/mysql) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMysql) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/mysql?tab=doc) | `5.7.32`, `8.0.22`
+MariaDB | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/mariadb) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMariadb) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/mariadb?tab=doc) | `10.5.8`
+PostgreSQL | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/postgres) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startPostgres) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/postgres?tab=doc) |  `10.15`, `11.10`, `12.5`, `13.1`
+Microsoft SQL Server | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/mssql) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMssql) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/mssql?tab=doc) | `2017-latest`, `2019-latest`
+MongoDB | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/mongo) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startMongo) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/mongo?tab=doc) | `3.6.21`, `4.4`
+RabbitMQ | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/rabbitmq) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startRabbitMq) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/rabbitmq?tab=doc) | `3.8.9-alpine`, `3.8.9-management-alpine`
+Kafka | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/kafka) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startKafka) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/kafka?tab=doc) | `2.5.1-L0`
+Elasticsearch | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/elastic) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startElastic) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/elastic?tab=doc) | `5.6`, `6.8.13`, `7.9.3`
+Kubernetes | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/k3s) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startKubernetes) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/k3s?tab=doc) | `v1.19.12`
+CockroachDB | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/cockroachdb) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startCockroachDB) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/cockroachdb?tab=doc) | `v19.2.11`, `v20.1.10`
+InfluxDB | [Go package](https://github.com/sandwich-go/gnomock/tree/master/preset/influxdb) | [Docs](https://app.swaggerhub.com/apis/orlangure/gnomock/1.5.0#/presets/startInfluxDB) | [Reference](https://pkg.go.dev/github.com/sandwich-go/gnomock/preset/influxdb?tab=doc) | `2.0.4-alpine`
 <!-- new presets go here -->
 
 It is possible to use Gnomock [directly from
-Go](https://pkg.go.dev/github.com/orlangure/gnomock#StartCustom) code without
+Go](https://pkg.go.dev/github.com/sandwich-go/gnomock#StartCustom) code without
 any presets. HTTP API only allows to setup containers using presets that exist
 in this repository.
 

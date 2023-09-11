@@ -12,8 +12,8 @@ import (
 
 	influxdb2 "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/domain"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/registry"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/registry"
 )
 
 const (

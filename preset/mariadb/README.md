@@ -1,6 +1,6 @@
 # Gnomock MariaDB
 
-Gnomock MariaDB is a [Gnomock](https://github.com/orlangure/gnomock) preset for
+Gnomock MariaDB is a [Gnomock](https://github.com/sandwich-go/gnomock) preset for
 running tests against a real MariaDB database, without mocks.
 
 ```go
@@ -10,8 +10,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/mariadb"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/mariadb"
 )
 
 func ExamplePreset() {

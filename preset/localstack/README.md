@@ -1,6 +1,6 @@
 # Gnomock Localstack
 
-Gnomock Localstack is a [Gnomock](https://github.com/orlangure/gnomock) preset
+Gnomock Localstack is a [Gnomock](https://github.com/sandwich-go/gnomock) preset
 for running tests against AWS services locally, powered by
 [Localstack](https://github.com/localstack/localstack) project. It allows
 to setup a number of supported AWS services locally, run tests against
@@ -22,8 +22,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/localstack"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/localstack"
 )
 
 func ExamplePreset_s3() {
@@ -82,8 +82,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sns"
 	"github.com/aws/aws-sdk-go/service/sqs"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/localstack"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/localstack"
 )
 
 func ExamplePreset_sqs_sns() {

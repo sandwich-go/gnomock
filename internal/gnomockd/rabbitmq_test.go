@@ -9,9 +9,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/gnomockd"
-	_ "github.com/orlangure/gnomock/preset/rabbitmq"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/gnomockd"
+	_ "github.com/sandwich-go/gnomock/preset/rabbitmq"
 	"github.com/streadway/amqp"
 	"github.com/stretchr/testify/require"
 )

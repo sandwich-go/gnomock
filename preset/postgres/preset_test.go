@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/postgres"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/postgres"
 	"github.com/stretchr/testify/require"
 )
 

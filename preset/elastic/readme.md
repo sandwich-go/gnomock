@@ -1,6 +1,6 @@
 # Gnomock Elasticsearch
 
-Gnomock Elasticsearch is a [Gnomock](https://github.com/orlangure/gnomock)
+Gnomock Elasticsearch is a [Gnomock](https://github.com/sandwich-go/gnomock)
 preset for running tests against a real Elasticsearch container, without mocks.
 
 ```go
@@ -12,8 +12,8 @@ import (
 	"testing"
 
 	"github.com/elastic/go-elasticsearch/v7"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/elastic"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/elastic"
 	"github.com/stretchr/testify/require"
 )
 

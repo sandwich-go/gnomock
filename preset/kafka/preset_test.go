@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/kafka"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/kafka"
 	kafkaclient "github.com/segmentio/kafka-go"
 	"github.com/stretchr/testify/require"
 )

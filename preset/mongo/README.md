@@ -1,6 +1,6 @@
 # Gnomock MongoDB
 
-Gnomock MongoDB is a [Gnomock](https://github.com/orlangure/gnomock) preset for
+Gnomock MongoDB is a [Gnomock](https://github.com/sandwich-go/gnomock) preset for
 running tests against a real MongoDB container, without mocks.
 
 ```go
@@ -10,8 +10,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/mongo"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/mongo"
 	"go.mongodb.org/mongo-driver/bson"
 	mongodb "go.mongodb.org/mongo-driver/mongo"
 	mongooptions "go.mongodb.org/mongo-driver/mongo/options"

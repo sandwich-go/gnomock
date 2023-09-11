@@ -15,7 +15,7 @@
 // like `WithDebugMode()` or `WithLogWriter()`.
 //
 // For the list of presets, please refer to
-// https://pkg.go.dev/github.com/orlangure/gnomock/preset.
+// https://pkg.go.dev/github.com/sandwich-go/gnomock/preset.
 //
 // Each preset can then be used in the following way:
 //

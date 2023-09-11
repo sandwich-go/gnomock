@@ -3,8 +3,8 @@ package {{ lower .Name }}_test
 import (
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/{{ lower .Name }}"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/{{ lower .Name }}"
 	"github.com/stretchr/testify/require"
 )
 

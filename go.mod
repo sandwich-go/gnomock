@@ -1,4 +1,4 @@
-module github.com/orlangure/gnomock
+module github.com/sandwich-go/gnomock
 
 go 1.15
 

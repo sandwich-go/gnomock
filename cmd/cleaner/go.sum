@@ -226,8 +226,8 @@ github.com/onsi/gomega v0.0.0-20170829124025-dcabb60a477c/go.mod h1:C1qb7wdrVGGV
 github.com/onsi/gomega v1.7.0/go.mod h1:ex+gbHU/CVuBBDIJjb2X0qEXbFg53c61hWP/1CpauHY=
 github.com/opencontainers/go-digest v1.0.0-rc1 h1:WzifXhOVOEOuFYOJAW6aQqW0TooG2iki3E3Ii+WN7gQ=
 github.com/opencontainers/go-digest v1.0.0-rc1/go.mod h1:cMLVZDEM3+U2I4VmLI6N8jQYUd2OVphdqWwCJHrFt2s=
-github.com/orlangure/gnomock v0.10.1 h1:4RKiWkuETmCKv3P13I0LGyUIMgP9QN1MEKXhPB5/AwE=
-github.com/orlangure/gnomock v0.10.1/go.mod h1:hTsIl+VEiqfXVkeXxsT6RM/Ed6zlsp31VDc75+aKrgw=
+github.com/sandwich-go/gnomock v0.10.1 h1:4RKiWkuETmCKv3P13I0LGyUIMgP9QN1MEKXhPB5/AwE=
+github.com/sandwich-go/gnomock v0.10.1/go.mod h1:hTsIl+VEiqfXVkeXxsT6RM/Ed6zlsp31VDc75+aKrgw=
 github.com/pelletier/go-toml v1.4.0/go.mod h1:PN7xzY2wHTK0K9p34ErDQMlFxa51Fk0OUruD3k1mMwo=
 github.com/peterbourgon/diskv v2.0.1+incompatible/go.mod h1:uqqh8zWWbv1HBMNONnaR/tNboyR3/BZd58JJSHlUSCU=
 github.com/pierrec/lz4 v2.0.5+incompatible/go.mod h1:pdkljMzZIN41W+lC3N2tnIh5sFi+IEE17M5jbnwPHcY=

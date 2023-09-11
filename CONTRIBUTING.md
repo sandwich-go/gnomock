@@ -67,43 +67,43 @@ Gnomock:
 > (to me, for example, I'm happy to help).
 
 1. Write an actual preset code with a test. The code goes into
-   [`preset`](https://github.com/orlangure/gnomock/tree/master/preset) package.
+   [`preset`](https://github.com/sandwich-go/gnomock/tree/master/preset) package.
    You can use existing presets for reference, and are encouraged to do so.
 
 1. Add the preset to the [preset
-   registry](https://github.com/orlangure/gnomock/tree/master/cmd/server/presets.go).
+   registry](https://github.com/sandwich-go/gnomock/tree/master/cmd/server/presets.go).
    This is the place used by
-   [`gnomockd`](https://github.com/orlangure/gnomock/tree/master/internal/gnomockd)
+   [`gnomockd`](https://github.com/sandwich-go/gnomock/tree/master/internal/gnomockd)
    to figure out what to do on incoming HTTP requests. This is required to
    allow projects in languages other than Go communicate with Gnomock
    container. Each preset in the registry has a test, which is different from
    the regular preset test: here the configuration comes from an HTTP request.
 
 1. Update [swagger
-   spec](https://github.com/orlangure/gnomock/blob/master/swagger/swagger.yaml)
+   spec](https://github.com/sandwich-go/gnomock/blob/master/swagger/swagger.yaml)
    with the new endpoint. For example, for `memcached` preset the endpoint is
    `/preset/memcached`.
 
 1. Generate [client SDK
-   code](https://github.com/orlangure/gnomock#using-gnomock-server). Gnomock
+   code](https://github.com/sandwich-go/gnomock#using-gnomock-server). Gnomock
    uses OpenAPI to generate client code from swagger specification.
 
 1. Add client SDK tests for the new preset. These tests go into
-   [`sdktest`](https://github.com/orlangure/gnomock/tree/master/sdktest)
+   [`sdktest`](https://github.com/sandwich-go/gnomock/tree/master/sdktest)
    package. They allow to make sure that client code in languages other than Go
    does not break after each update.
 
 1. Update [README](README.md) using the links to the new packages/docs.
 
 1. Add a job to test the new preset to [Github
-   Actions](https://github.com/orlangure/gnomock/blob/master/.github/workflows/test.yaml)
+   Actions](https://github.com/sandwich-go/gnomock/blob/master/.github/workflows/test.yaml)
    and
-   [CircleCI](https://github.com/orlangure/gnomock/blob/master/.circleci/config.yml).
+   [CircleCI](https://github.com/sandwich-go/gnomock/blob/master/.circleci/config.yml).
 
 #### Preset Generator
 
 You can use a [preset
-generator](https://github.com/orlangure/gnomock/blob/master/cmd/generator) to
+generator](https://github.com/sandwich-go/gnomock/blob/master/cmd/generator) to
 automate the boring part of the above checklist:
 
 ```bash

@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/orlangure/gnomock"
+	"github.com/sandwich-go/gnomock"
 	{{ if .Public -}}
-	"github.com/orlangure/gnomock/internal/registry"
+	"github.com/sandwich-go/gnomock/internal/registry"
 	{{- end}}
 )
 

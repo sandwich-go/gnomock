@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/splunk"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/splunk"
 	"github.com/stretchr/testify/require"
 )
 

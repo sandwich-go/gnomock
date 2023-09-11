@@ -17,8 +17,8 @@ import (
 	"github.com/docker/docker/api/types/mount"
 	"github.com/docker/docker/client"
 	"github.com/docker/go-connections/nat"
-	"github.com/orlangure/gnomock/internal/cleaner"
-	"github.com/orlangure/gnomock/internal/health"
+	"github.com/sandwich-go/gnomock/internal/cleaner"
+	"github.com/sandwich-go/gnomock/internal/health"
 	"go.uber.org/zap"
 )
 

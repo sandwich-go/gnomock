@@ -4,15 +4,15 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/orlangure/gnomock/preset/etcd"
+	"github.com/sandwich-go/gnomock/preset/etcd"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"testing"
 	"time"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/testutil"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/testutil"
 	"github.com/stretchr/testify/require"
 )
 

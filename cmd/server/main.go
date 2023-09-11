@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/orlangure/gnomock/internal/gnomockd"
+	"github.com/sandwich-go/gnomock/internal/gnomockd"
 )
 
 var version string

@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/errors"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/errors"
 	"github.com/stretchr/testify/require"
 )
 

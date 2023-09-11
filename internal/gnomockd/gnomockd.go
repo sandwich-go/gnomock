@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/orlangure/gnomock/internal/errors"
+	"github.com/sandwich-go/gnomock/internal/errors"
 )
 
 // Handler returns an HTTP handler ready to serve incoming connections.

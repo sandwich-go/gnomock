@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/orlangure/gnomock/internal/health"
+	"github.com/sandwich-go/gnomock/internal/health"
 	"github.com/stretchr/testify/require"
 )
 

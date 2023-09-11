@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/mongo"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/mongo"
 	"github.com/stretchr/testify/require"
 	"go.mongodb.org/mongo-driver/bson"
 	mongodb "go.mongodb.org/mongo-driver/mongo"

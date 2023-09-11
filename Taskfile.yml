@@ -69,7 +69,7 @@ tasks:
   git:clone:python:
     cmds:
       - rm -rf gnomock
-      - git clone --depth 1 https://github.com/orlangure/gnomock-python-sdk gnomock
+      - git clone --depth 1 https://github.com/sandwich-go/gnomock-python-sdk gnomock
     dir: ./sdktest/python
 
   generate:sdk:python:

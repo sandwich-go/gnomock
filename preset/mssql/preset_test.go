@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/mssql"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/mssql"
 	"github.com/stretchr/testify/require"
 )
 

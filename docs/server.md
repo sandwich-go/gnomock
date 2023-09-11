@@ -92,7 +92,7 @@ There are auto-generated wrappers for the available API:
 
 | Client | Sample code |
 |--------|-------------|
-| [Python SDK](https://github.com/orlangure/gnomock-python-sdk) | [Code](https://github.com/orlangure/gnomock/blob/master/sdktest/python/test/test_sdk.py) |
+| [Python SDK](https://github.com/sandwich-go/gnomock-python-sdk) | [Code](https://github.com/sandwich-go/gnomock/blob/master/sdktest/python/test/test_sdk.py) |
 | JavaScript SDK | |
 | Ruby SDK | |
 | PHP SDK | |

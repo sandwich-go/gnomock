@@ -1,6 +1,6 @@
 # Gnomock MySQL
 
-Gnomock MySQL is a [Gnomock](https://github.com/orlangure/gnomock) preset for
+Gnomock MySQL is a [Gnomock](https://github.com/sandwich-go/gnomock) preset for
 running tests against a real MySQL database, without mocks.
 
 ```go
@@ -10,8 +10,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/mysql"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/mysql"
 )
 
 func ExamplePreset() {

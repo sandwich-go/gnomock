@@ -11,9 +11,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/gnomockd"
-	"github.com/orlangure/gnomock/preset/splunk"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/gnomockd"
+	"github.com/sandwich-go/gnomock/preset/splunk"
 	"github.com/stretchr/testify/require"
 )
 

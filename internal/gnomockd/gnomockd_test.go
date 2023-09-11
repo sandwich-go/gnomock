@@ -6,8 +6,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/orlangure/gnomock/internal/gnomockd"
-	_ "github.com/orlangure/gnomock/preset/mongo" // this is only to prevent error 404
+	"github.com/sandwich-go/gnomock/internal/gnomockd"
+	_ "github.com/sandwich-go/gnomock/preset/mongo" // this is only to prevent error 404
 	"github.com/stretchr/testify/require"
 )
 

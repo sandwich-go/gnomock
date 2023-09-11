@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/health"
-	"github.com/orlangure/gnomock/internal/testutil"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/health"
+	"github.com/sandwich-go/gnomock/internal/testutil"
 	"github.com/stretchr/testify/require"
 )
 

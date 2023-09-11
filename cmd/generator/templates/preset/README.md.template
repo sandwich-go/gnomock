@@ -1,6 +1,6 @@
 # Gnomock {{ .Name }}
 
-Gnomock {{ .Name }} is a [Gnomock](https://github.com/orlangure/gnomock) preset for
+Gnomock {{ .Name }} is a [Gnomock](https://github.com/sandwich-go/gnomock) preset for
 running tests against a real {{ .Name }} container, without mocks.
 
 ```go

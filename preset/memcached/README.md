@@ -1,6 +1,6 @@
 # Gnomock Memcached
 
-Gnomock Memcached is a [Gnomock](https://github.com/orlangure/gnomock) preset for
+Gnomock Memcached is a [Gnomock](https://github.com/sandwich-go/gnomock) preset for
 running tests against a real Memcached container, without mocks.
 
 ```go
@@ -11,8 +11,8 @@ import (
 	"testing"
 
 	memcachedclient "github.com/bradfitz/gomemcache/memcache"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/memcached"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/memcached"
 )
 
 func ExamplePreset() {

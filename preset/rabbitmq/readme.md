@@ -1,6 +1,6 @@
 # Gnomock RabbitMQ
 
-Gnomock RabbitMQ is a [Gnomock](https://github.com/orlangure/gnomock) preset for
+Gnomock RabbitMQ is a [Gnomock](https://github.com/sandwich-go/gnomock) preset for
 running tests against a real RabbitMQ message queue, without mocks.
 
 ```go
@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/rabbitmq"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/rabbitmq"
 	"github.com/streadway/amqp"
 	"github.com/stretchr/testify/require"
 )

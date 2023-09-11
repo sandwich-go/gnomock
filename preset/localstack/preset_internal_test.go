@@ -3,7 +3,7 @@ package localstack
 import (
 	"testing"
 
-	"github.com/orlangure/gnomock"
+	"github.com/sandwich-go/gnomock"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,8 +3,8 @@ package registry_test
 import (
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/registry"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/registry"
 	"github.com/stretchr/testify/require"
 )
 

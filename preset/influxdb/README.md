@@ -1,6 +1,6 @@
 # Gnomock InfluxDB
 
-Gnomock InfluxDB is a [Gnomock](https://github.com/orlangure/gnomock) preset
+Gnomock InfluxDB is a [Gnomock](https://github.com/sandwich-go/gnomock) preset
 for running tests against a real InfluxDB container, without mocks.
 
 ```go
@@ -13,8 +13,8 @@ import (
 
 	influxdb2 "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/domain"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/influxdb"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/influxdb"
 	"github.com/stretchr/testify/require"
 )
 

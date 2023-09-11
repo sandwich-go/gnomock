@@ -10,9 +10,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/gnomockd"
-	_ "github.com/orlangure/gnomock/preset/mariadb"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/gnomockd"
+	_ "github.com/sandwich-go/gnomock/preset/mariadb"
 	"github.com/stretchr/testify/require"
 )
 

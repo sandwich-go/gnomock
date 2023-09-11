@@ -12,8 +12,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/sns"
 	"github.com/aws/aws-sdk-go/service/sqs"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/localstack"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/localstack"
 	"github.com/stretchr/testify/require"
 )
 

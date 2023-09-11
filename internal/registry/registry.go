@@ -3,7 +3,7 @@
 package registry
 
 import (
-	"github.com/orlangure/gnomock"
+	"github.com/sandwich-go/gnomock"
 )
 
 type presetFactory func() gnomock.Preset

@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/preset/rabbitmq"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/preset/rabbitmq"
 	"github.com/streadway/amqp"
 	"github.com/stretchr/testify/require"
 )

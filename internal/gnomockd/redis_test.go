@@ -9,9 +9,9 @@ import (
 	"testing"
 
 	"github.com/go-redis/redis"
-	"github.com/orlangure/gnomock"
-	"github.com/orlangure/gnomock/internal/gnomockd"
-	_ "github.com/orlangure/gnomock/preset/redis"
+	"github.com/sandwich-go/gnomock"
+	"github.com/sandwich-go/gnomock/internal/gnomockd"
+	_ "github.com/sandwich-go/gnomock/preset/redis"
 	"github.com/stretchr/testify/require"
 )
 
