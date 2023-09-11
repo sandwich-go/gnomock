@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/orlangure/gnomock/preset/etcd"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -214,4 +215,20 @@ func requireResponse(t *testing.T, url string, expected string) {
 
 func failingHealthcheck(ctx context.Context, c *gnomock.Container) error {
 	return fmt.Errorf("this container should not start")
+}
+
+func TestGnomock_etcd(t *testing.T) {
+	var p = etcd.Preset()
+	var container, err = gnomock.Start(p,
+		gnomock.WithDebugMode(),
+		gnomock.WithContainerName("etcd"),
+	)
+	if err != nil {
+		panic(err)
+	}
+	t.Log(container)
+	err = gnomock.Stop(container)
+	if err != nil {
+		panic(err)
+	}
 }
