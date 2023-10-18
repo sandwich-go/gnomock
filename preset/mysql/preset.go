@@ -73,15 +73,24 @@ func (p *P) Options() []gnomock.Option {
 
 	p.setDefaults()
 
-	opts := []gnomock.Option{
-		gnomock.WithHealthCheck(p.healthcheck),
-		gnomock.WithEnv("MYSQL_USER=" + p.User),
-		gnomock.WithEnv("MYSQL_PASSWORD=" + p.Password),
-		gnomock.WithEnv("MYSQL_DATABASE=" + p.DB),
-		gnomock.WithEnv("MYSQL_RANDOM_ROOT_PASSWORD=yes"),
-		gnomock.WithInit(p.initf()),
+	var opts []gnomock.Option
+	if p.User == "root" {
+		opts = []gnomock.Option{
+			gnomock.WithHealthCheck(p.healthcheck),
+			gnomock.WithEnv("MYSQL_DATABASE=" + p.DB),
+			gnomock.WithEnv("MYSQL_ROOT_PASSWORD=" + p.Password),
+			gnomock.WithInit(p.initf()),
+		}
+	} else {
+		opts = []gnomock.Option{
+			gnomock.WithHealthCheck(p.healthcheck),
+			gnomock.WithEnv("MYSQL_USER=" + p.User),
+			gnomock.WithEnv("MYSQL_PASSWORD=" + p.Password),
+			gnomock.WithEnv("MYSQL_DATABASE=" + p.DB),
+			gnomock.WithEnv("MYSQL_RANDOM_ROOT_PASSWORD=yes"),
+			gnomock.WithInit(p.initf()),
+		}
 	}
-
 	return opts
 }
 
