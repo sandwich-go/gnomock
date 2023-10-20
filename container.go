@@ -14,6 +14,8 @@ type Container struct {
 	// in the future.
 	ID string `json:"id,omitempty"`
 
+	Image string `json:"image,omitempty"`
+
 	// Host name of bound ports
 	//
 	// Default: localhost

@@ -159,6 +159,27 @@ func closeLogReader(logReader io.ReadCloser, g *errgroup.Group) func() error {
 	}
 }
 
+func ContainerList(opts ...Option) ([]*Container, error) {
+	config := buildConfig(opts...)
+	g, err := newG(config.Debug)
+	if err != nil {
+		return nil, fmt.Errorf("can't create new gnomock session: %w", err)
+	}
+
+	defer func() { _ = g.log.Sync() }()
+
+	g.log.Infow("container list", "config", config)
+
+	ctx, cancel := context.WithTimeout(config.ctx, config.Timeout)
+	defer cancel()
+
+	cli, err := g.dockerConnect()
+	if err != nil {
+		return nil, fmt.Errorf("can't create docker client: %w", err)
+	}
+	return cli.containerList(ctx)
+}
+
 // Start creates a container using the provided Preset. The Preset provides its
 // own Options to configure Gnomock container. Usually this is enough, but it
 // is still possible to extend/override Preset options with new values. For

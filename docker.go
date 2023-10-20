@@ -58,6 +58,33 @@ func (g *g) dockerConnect() (*docker, error) {
 	return &docker{client: cli, log: g.log}, nil
 }
 
+func (d *docker) containerList(ctx context.Context) ([]*Container, error) {
+	d.log.Info("container list")
+	cs, err := d.client.ContainerList(ctx, types.ContainerListOptions{
+		All: false,
+	})
+	if err != nil {
+		return nil, err
+	}
+	var out = make([]*Container, 0, len(cs))
+	for _, v := range cs {
+		c := &Container{ID: v.ID, Host: d.hostAddr(), Image: v.Image, Ports: make(map[string]Port)}
+		for j, vv := range v.Ports {
+			p := Port{Protocol: vv.Type, Port: int(vv.PublicPort)}
+			if j == 0 {
+				c.Ports[DefaultPort] = p
+			}
+			c.Ports[fmt.Sprintf("%s:%d", vv.IP, vv.PublicPort)] = p
+		}
+		if len(c.Ports) > 0 {
+			out = append(out, c)
+		}
+	}
+
+	d.log.Info("container listed")
+	return out, nil
+}
+
 func (d *docker) pullImage(ctx context.Context, image string, cfg *Options) error {
 	d.log.Info("pulling image")
 

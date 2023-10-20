@@ -232,3 +232,13 @@ func TestGnomock_etcd(t *testing.T) {
 		panic(err)
 	}
 }
+
+func TestContainerList(t *testing.T) {
+	cs, err := gnomock.ContainerList(gnomock.WithDebugMode())
+	if err != nil {
+		t.Error(err)
+	}
+	for _, c := range cs {
+		t.Log(c)
+	}
+}
