@@ -24,7 +24,7 @@ import (
 
 const (
 	localhostAddr             = "127.0.0.1"
-	defaultStopTimeout        = time.Second * 1
+	defaultStopTimeout        = 1
 	duplicateContainerPattern = `Conflict. The container name "(?:.+?)" is already in use by container "(\w+)". You have to remove \(or rename\) that container to be able to reuse that name.` // nolint:lll
 	dockerSockAddr            = "/var/run/docker.sock"
 )
@@ -349,7 +349,7 @@ func (d *docker) stopContainer(ctx context.Context, id string) error {
 
 	stopTimeout := defaultStopTimeout
 
-	err := d.client.ContainerStop(ctx, id, &stopTimeout)
+	err := d.client.ContainerStop(ctx, id, container.StopOptions{Timeout: &stopTimeout})
 	if err != nil {
 		return fmt.Errorf("can't stop container %s: %w", id, err)
 	}
