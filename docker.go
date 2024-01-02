@@ -243,7 +243,7 @@ func (d *docker) portBindings(exposedPorts nat.PortSet, ports NamedPorts) nat.Po
 	return portBindings
 }
 
-func (d *docker) createContainer(ctx context.Context, image string, ports NamedPorts, cfg *Options) (*container.ContainerCreateCreatedBody, error) { // nolint:lll
+func (d *docker) createContainer(ctx context.Context, image string, ports NamedPorts, cfg *Options) (*container.CreateResponse, error) { // nolint:lll
 	exposedPorts := d.exposedPorts(ports)
 	containerConfig := &container.Config{
 		Image:        image,

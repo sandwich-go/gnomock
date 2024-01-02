@@ -6,7 +6,7 @@ require (
 	github.com/aws/aws-sdk-go v1.40.16
 	github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b
 	github.com/denisenkom/go-mssqldb v0.10.0
-	github.com/docker/docker v23.0.3+incompatible
+	github.com/docker/docker v24.0.6+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/elastic/go-elasticsearch/v7 v7.14.0
 	github.com/go-redis/redis v6.15.9+incompatible
